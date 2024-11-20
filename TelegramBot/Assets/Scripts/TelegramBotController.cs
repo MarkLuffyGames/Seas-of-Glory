@@ -43,6 +43,8 @@ public class TelegramBotController : MonoBehaviour
     public TelegramBotClient botClient;
     private CancellationTokenSource cts;
 
+    public string botToken;
+
     private void Awake()
     {
         if(Instance == null)
@@ -57,7 +59,6 @@ public class TelegramBotController : MonoBehaviour
 
     public void StartBot()
     {
-        string botToken = "7313122721:AAEwW42bwmfnQ_JuHgXlRpKkn6lUKf0shyY";
         botClient = new TelegramBotClient(botToken);
         cts = new CancellationTokenSource();
         Debug.Log("Bot de Telegram iniciado.");
